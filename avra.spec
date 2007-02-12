@@ -1,5 +1,5 @@
 Summary:	Atmel AVR Assembler
-Summary(pl.UTF-8):   Asembler dla mikrokontrolerów AVR Atmel
+Summary(pl.UTF-8):	Asembler dla mikrokontrolerów AVR Atmel
 Name:		avra
 Version:	1.2.0
 Release:	1
