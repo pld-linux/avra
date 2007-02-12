@@ -1,5 +1,5 @@
 Summary:	Atmel AVR Assembler
-Summary(pl):	Asembler dla mikrokontrolerÛw AVR Atmel
+Summary(pl.UTF-8):   Asembler dla mikrokontroler√≥w AVR Atmel
 Name:		avra
 Version:	1.2.0
 Release:	1
@@ -16,9 +16,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 AVRA is an assembler for Atmel AVR microcontrollers, and it is almost
 compatible with Atmel's own assembler AVRASM32.
 
-%description -l pl
-AVRA jest asemblerem dla mikrokontrolerÛw AVR Atmel, i jest prawie
-ca≥kowicie kompatybilny z w≥asnym asemblerem AVRASM32 Atmela.
+%description -l pl.UTF-8
+AVRA jest asemblerem dla mikrokontroler√≥w AVR Atmel, i jest prawie
+ca≈Çkowicie kompatybilny z w≈Çasnym asemblerem AVRASM32 Atmela.
 
 %prep
 %setup -q -c
