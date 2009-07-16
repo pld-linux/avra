@@ -1,12 +1,14 @@
+
+%define rel a
 Summary:	Atmel AVR Assembler
 Summary(pl.UTF-8):	Asembler dla mikrokontrolerów AVR Atmel
 Name:		avra
-Version:	1.2.2
-Release:	1
+Version:	1.2.3
+Release:	0.%{rel}.1
 License:	GPL
 Group:		Development
-Source0:	http://dl.sourceforge.net/avra/%{name}-%{version}-src.tar.bz2
-# Source0-md5:	e05c89f7c481641d2cfdf8ccbbeb3109
+Source0:	http://dl.sourceforge.net/avra/%{name}-%{version}%{rel}-src.tar.bz2
+# Source0-md5:	738a40e52bb5b836ee7fd816669a99c2
 URL:		http://avra.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -26,7 +28,7 @@ całkowicie kompatybilny z własnym asemblerem AVRASM32 Atmela.
 %build
 %{__aclocal}
 %{__autoconf}
-%{__automake}
+%{__automake} -a
 %configure
 %{__make}
 
