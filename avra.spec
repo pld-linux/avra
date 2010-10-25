@@ -1,12 +1,12 @@
 Summary:	Atmel AVR Assembler
 Summary(pl.UTF-8):	Asembler dla mikrokontrolerów AVR Atmel
 Name:		avra
-Version:	1.2.3
+Version:	1.3.0
 Release:	1
 License:	GPL
 Group:		Development
-Source0:	http://dl.sourceforge.net/avra/%{name}-%{version}a-src.tar.bz2
-# Source0-md5:	738a40e52bb5b836ee7fd816669a99c2
+Source0:	http://downloads.sourceforge.net/avra/%{name}-%{version}.tar.bz2
+# Source0-md5:	d5d48369ceaa004c4ca09f61f69b2c84
 URL:		http://avra.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -24,6 +24,7 @@ całkowicie kompatybilny z własnym asemblerem AVRASM32 Atmela.
 %setup -q
 
 %build
+cd src
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -34,16 +35,16 @@ całkowicie kompatybilny z własnym asemblerem AVRASM32 Atmela.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%{__make} install \
+%{__make} -C src install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-cp -rf Example/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -rf examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS README TODO
+%doc doc/{*.html,*.txt} TODO
 %attr(755,root,root) %{_bindir}/*
 %{_examplesdir}/%{name}-%{version}
