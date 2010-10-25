@@ -46,5 +46,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc doc/{*.html,*.txt} TODO
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/avra
 %{_examplesdir}/%{name}-%{version}
